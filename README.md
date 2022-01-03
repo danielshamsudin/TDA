@@ -1,2 +1,2 @@
-# TDA
+# TDA - Sudoku
 TDA Project
