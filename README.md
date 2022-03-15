@@ -1,2 +1,4 @@
 # TDA - Sudoku
-TDA Project
+Sudoku solving algorithm
+- Backtracking 
+- Genetic Algorithm
