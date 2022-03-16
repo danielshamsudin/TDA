@@ -8,6 +8,7 @@ License : MIT License
 """
 from math import sqrt
 from random import shuffle, randint
+import time 
 import argparse
 
 
@@ -366,6 +367,7 @@ if __name__ == '__main__':
                         int(j / sqrt_n) * sqrt_n
                         ].append(line_values[i])
             try:
+                start_time = time.time()
                 solution, best_fitness = solve(
                     problem_grid,
                     population_size=args.population_size,
@@ -386,6 +388,8 @@ if __name__ == '__main__':
 
                 if not args.quiet:
                     print(output_str[:-1])
+                exec_time = time.time() - start_time
+                print("\n\nExecution Time: " + str(round(exec_time, 8)) + "s")
 
             except:
                 exit('Input problem is not solvable.')
