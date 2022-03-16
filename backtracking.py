@@ -1,6 +1,6 @@
 # read file input and store in a list with size of 9x9
 from genericpath import exists
-
+import time
 
 if exists("./sudoku.txt"):
     f = open("./sudoku.txt", "r")
@@ -69,5 +69,8 @@ printBoard(board)
 print("====================================")
 print("After")
 print("====================================")
+start_time = time.time()
 solve()
+exec_time = time.time() - start_time
 print("====================================")
+print("\n\nExecution Time: " + str(round(exec_time, 8)) + "s")
