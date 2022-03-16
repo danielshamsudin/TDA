@@ -6,7 +6,9 @@ if exists("./sudoku.txt"):
     f = open("./sudoku.txt", "r")
     board = []
     for line in f:
-        board.append(list(map(int, line.split())))
+        tmp = line.split()
+        tmp = [0 if x == "-" else int(x) for x in tmp]
+        board.append(tmp)
     f.close()
 else:
     board = [
