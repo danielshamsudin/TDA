@@ -1,31 +1,17 @@
-__sudoku_genetic_python__ is a Sudoku solver using Python and genetic algorithm which is implemented using this [paper](./paper.pdf).
+# Sudoku solver ACO
+Solving sudoku using Ant Colony Optimization as proposed in the paper [https://arxiv.org/abs/1805.03545v1](https://arxiv.org/abs/1805.03545v1). Visualized using PyGame library.
 
-# Usage
+![PyGame GUI screenshot](/images/gui_screenshot.png)
+
+## Usage
 ```
-$ pythpn3 sudoku_genetic_python --help
-usage: suduko_genetic_python.py [-h] [-o OUTPUT_FILE] [-p POPULATION_SIZE]
-                                [-s SELECTION_RATE] [-m MAX_GENERATIONS_COUNT]
-                                [-u MUTATION_RATE] [-q]
-                                file
-
-positional arguments:
-  file                  Input file that contains Sudoku's problem.
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -o OUTPUT_FILE, --output-file OUTPUT_FILE
-                        Output file to store problem's solution.
-  -p POPULATION_SIZE, --population-size POPULATION_SIZE
-  -s SELECTION_RATE, --selection-rate SELECTION_RATE
-  -m MAX_GENERATIONS_COUNT, --max-generations-count MAX_GENERATIONS_COUNT
-  -u MUTATION_RATE, --mutation-rate MUTATION_RATE
-  -q, --quiet
+python3 sudoku/src/main.py <sudoku_instance> <gui/console>
 ```
+Sudoku instances can be found in the directories **sudoku/data/easy_to_solve** and **sudoku/data/hard_to_solve**. When **console** option is selected program outputs to the terminal.
 
-## Author
+## Requirements
+* Python 3
+* [PyGame](https://www.pygame.org/wiki/GettingStarted)
 
-Hamidreza Mahdavipanah
-
-## License
-
-[MIT](./LICENSE)
+## About
+Created as a semestral project for the [Artificial Intelligence Fundamentals](http://bilakniha.cvut.cz/cs/predmet2358306.html) course at [FIT CTU](https://fit.cvut.cz/).
